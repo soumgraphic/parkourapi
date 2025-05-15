@@ -1,4 +1,4 @@
-# Homework: Build Your Own API with Spring boot, Mistral AI, Swagger, and Deployment
+# Homework: Build Your Own API with Spring boot, JPA, Mistral AI, Swagger, and Deployment
 
 ## Objective
 
@@ -53,7 +53,7 @@ Your task is to design and build an API similar to the **Parkour API** we studie
    
 8. **Submission and Deadline**:
    - The deadline for submission is **June 05, 2025**.
-   - Submit your GitHub repository link to the specified email address diarra176@gmail.com.
+   - Submit your GitHub repository link to the specified email address.
 
 ---
 
