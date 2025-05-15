@@ -19,6 +19,18 @@ spring:
   h2:
     console:
       enabled: true # The console url is: /h2-console
+  ai:
+    mistralai:
+      api-key: DvGIdVsMQCHv4nszInSWusYT7J0IQU4F
+      chat:
+        options:
+          model: mistral-small-latest
 jwt:
   secret: jOkUI309fb6Lk6cBEzmf05NnPHXfST6EnvmWnGXoYk7VTT2g9a
   expiration: 3600000 # 1 hour
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+

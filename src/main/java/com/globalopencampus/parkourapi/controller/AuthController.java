@@ -7,6 +7,8 @@ import com.globalopencampus.parkourapi.dto.model.AuthenticationRequestDto;
 import com.globalopencampus.parkourapi.dto.model.UserDto;
 import com.globalopencampus.parkourapi.model.User;
 import com.globalopencampus.parkourapi.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,6 +23,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
 
+@Tag(name = "Authentication services", description = "Related to authentication and security in Parkour API")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -42,7 +45,9 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
     }
 
-
+    @Operation(
+            summary = "Service for authentication login"
+    )
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody AuthenticationRequestDto authenticationRequestDto){
         try {
@@ -62,6 +67,9 @@ public class AuthController {
         return ResponseEntity.ok(Map.of("accessToken", jwt));
     }
 
+    @Operation(
+            summary = "Service for authentication register"
+    )
     @PostMapping("/register")
     public User register(@RequestBody UserDto userDto){
 

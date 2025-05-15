@@ -70,6 +70,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry
                                 .requestMatchers("/auth/register", "/auth/login").permitAll()
+                                .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**").permitAll()
                                 .requestMatchers(toH2Console()).permitAll()
                                 // .requestMatchers("/users/**").hasAnyRole("ADMINISTRATOR")
                                 .anyRequest().authenticated()

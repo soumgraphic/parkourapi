@@ -4,6 +4,8 @@ import com.globalopencampus.parkourapi.dto.mapper.UserMapper;
 import com.globalopencampus.parkourapi.dto.model.UserDto;
 import com.globalopencampus.parkourapi.model.User;
 import com.globalopencampus.parkourapi.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -12,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+@Tag(name = "User services", description = "Related to Parkour API users")
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -22,6 +25,9 @@ public class UserController {
         this.userService = userService;
     }
 
+    @Operation(
+            summary = "To get user by id"
+    )
     @PreAuthorize("hasRole('ROLE_ADMINISTRATOR') or hasRole('ROLE_MANAGER') or hasRole('ROLE_USER')")
     @GetMapping("/{userId}")
     User get(@PathVariable Long userId){
@@ -29,6 +35,9 @@ public class UserController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
+    @Operation(
+            summary = "To add a new user"
+    )
     @PreAuthorize("hasRole('ROLE_ADMINISTRATOR') or hasRole('ROLE_MANAGER') or hasRole('ROLE_USER')")
     @PostMapping()
     User add(@RequestBody UserDto userDto){
@@ -43,6 +52,10 @@ public class UserController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
+    @Operation(
+            summary = "To add an existing user",
+            description = "Administrator or Manager role required"
+    )
     @PreAuthorize("hasRole('ROLE_ADMINISTRATOR') or hasRole('ROLE_MANAGER')")
     @PutMapping("/{userId}")
     User update(@PathVariable Long userId, @RequestBody UserDto userDto){
@@ -65,6 +78,10 @@ public class UserController {
     galad235 -> ADMINISTRATOR
      */
 
+    @Operation(
+            summary = "To delete an existing user",
+            description = "Administrator role required"
+    )
     @PreAuthorize("hasRole('ROLE_ADMINISTRATOR')")
     @DeleteMapping("/{userId}")
     ResponseEntity delete(@PathVariable Long userId){
@@ -77,6 +94,10 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    @Operation(
+            summary = "To get user list",
+            description = "Administrator or Manager role required"
+    )
     @PreAuthorize("hasRole('ROLE_ADMINISTRATOR') or hasRole('ROLE_MANAGER')")
     @GetMapping()
     List<User> getAll(){
