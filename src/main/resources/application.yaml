@@ -34,5 +34,5 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
 server:
-  port: 8080
-  forward-headers-strategy: framework
+  port: ${PORT:8080}
+  # forward-headers-strategy: framework
