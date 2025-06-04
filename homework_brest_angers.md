@@ -2,7 +2,7 @@
 
 ## Objective
 
-Your task is to design and build an API similar to the **Parkour API** we studied in class, but with your own unique concept. The goal is to apply the knowledge you have gained about API development, including the integration of Mistral AI, Swagger documentation, and deployment to a platform like **Railway** or an alternative.
+Your task is to design and build an API similar to the **Parkour API** we studied in class, but with your own unique concept. The goal is to apply the knowledge you have gained about API development, including the integration of Mistral AI, Swagger documentation, and deployment to a platform like **Railway or Heroku** or an alternative.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ Your task is to design and build an API similar to the **Parkour API** we studie
     - Your work must be original and not copied from others.
    
 8. **Submission and Deadline**:
-   - The deadline for submission is **June 05, 2025**.
+   - The deadline for submission is **June 27, 2025**.
    - Submit your GitHub repository link to the specified email address.
 
 ---
@@ -149,3 +149,7 @@ The Parkour API aims to provide a platform for parkour enthusiasts to connect, s
 - Annotate controllers and methods with Swagger annotations.
 
 This specification provides a comprehensive overview of the API routes and parameters needed for your Parkour API.
+
+### Ressources
+- Documenting a spring rest API using OpenAPI and Swagger 3: 
+  - https://www.baeldung.com/spring-rest-openapi-documentation
