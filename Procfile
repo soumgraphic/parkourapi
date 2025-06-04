@@ -1,1 +1,1 @@
-web: java -Xmx512m -jar build/libs/parkourapi-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -Dserver.address=0.0.0.0 -jar build/libs/parkourapi-0.0.1-SNAPSHOT.jar
