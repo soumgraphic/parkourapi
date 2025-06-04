@@ -48,7 +48,7 @@ tasks.named('test') {
 }
 
 bootJar {
-	mainClass.set('com.soumgraphic.parkourapi.ParkourApiApplication')
+	mainClass.set('com.globalopencampus.parkourapi.ParkourApiApplication')
 }
 jar {
 	enabled = false
