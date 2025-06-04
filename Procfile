@@ -1,1 +1,0 @@
-web: ./gradlew bootJar --quiet && java -Dserver.port=$PORT -Dserver.address=0.0.0.0 -jar build/libs/*.jar
