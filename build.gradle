@@ -46,3 +46,10 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootJar {
+	mainClassName = 'com.soumgraphic.parkourapi.ParkourApiApplication'
+}
+jar {
+	enabled = false
+}
