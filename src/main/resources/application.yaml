@@ -36,3 +36,11 @@ springdoc:
 server:
   port: ${PORT:8080}
   # forward-headers-strategy: framework
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

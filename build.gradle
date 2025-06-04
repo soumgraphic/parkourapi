@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of("22")
 	}
 }
 
@@ -39,6 +39,8 @@ dependencies {
 
 	// -- For Swagger in Spring Boot
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6'
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
 
 tasks.named('test') {
