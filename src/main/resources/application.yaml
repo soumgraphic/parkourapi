@@ -21,12 +21,12 @@ spring:
       enabled: true # The console url is: /h2-console
   ai:
     mistralai:
-      api-key: YOUR_MISTRAL_API_KEY
+      api-key: TNjGv84Ih78RCKg952PjjaaxQ1wZKUnB # ${MISTRAL_API_KEY:} # Set your Mistral API key here, or use an environment variable
       chat:
         options:
           model: mistral-small-latest
 jwt:
-  secret: YOUR_SECURE_JWT_SECRET
+  secret: jOkUI309fb6Lk6cBEzmf05NnPHXfST6EnvmWnGXoYk7VTT2g9a # ${JWT_SECRET:} # Set your JWT secret here, or use an environment variable
   expiration: 3600000 # 1 hour
 springdoc:
   api-docs:
